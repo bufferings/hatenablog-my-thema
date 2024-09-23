@@ -882,7 +882,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 .entry-content code {
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    font-size: 0.85em;
+    font-size: 0.8rem;
     margin: 0 4px;
     padding: 0.3em 0.4em;
     background-color: #eceff1;
@@ -1393,7 +1393,7 @@ pre[class*="language-"] {
 
     /* 追加 */
     text-overflow: unset;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 /* Code blocks */
