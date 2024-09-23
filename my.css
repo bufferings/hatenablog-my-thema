@@ -1390,10 +1390,6 @@ pre[class*="language-"] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-
-    /* 追加 */
-    text-overflow: unset;
-    font-size: 0.8rem;
 }
 
 /* Code blocks */
@@ -1401,18 +1397,6 @@ pre[class*="language-"] {
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
-
-    /* 追加 */
-    padding: 1em 10px;
-    margin: .5em -10px;
-}
-
-/* 追加 */
-@media (min-width: 640px) {
-    pre[class*="language-"] {
-        padding: 1em;
-        margin: .5em 0;
-    }
 }
 
 :not(pre) > code[class*="language-"],
@@ -1499,4 +1483,52 @@ pre[class*="language-"] {
 
 .token.inserted {
     color: green !important;
+}
+
+/* コードブロック上書き変更部分 */
+code[class*="language-"],
+pre[class*="language-"] {
+    text-overflow: unset;
+    font-size: 0.8rem;
+}
+
+pre[class*="language-"] {
+    padding: 1em 10px;
+    margin: 0;
+}
+
+@media (min-width: 640px) {
+    pre[class*="language-"] {
+        padding: 1em;
+    }
+}
+
+/* コードブロックのラベル */
+.code-toolbar {
+    display: grid;
+    grid-template-rows: auto;
+    margin: .5em -10px;
+
+    .toolbar {
+        grid-row: 1;
+        padding: 0 10px;
+        background-color: #2d2d2d;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-size: 0.8rem;
+
+        .toolbar-item {
+            border-bottom-right-radius: 0.25em;
+            border-bottom-left-radius: 0.25em;
+            width: fit-content;
+            padding: 0 10px;
+            background-color: #424242;
+            color: #eceff1;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .code-toolbar {
+        margin: .5em 0;
+    }
 }
