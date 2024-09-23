@@ -13,7 +13,7 @@
 
   document.addEventListener("DOMContentLoaded", (event) => {
     document.querySelectorAll("pre.code").forEach((pre) => {
-      const [lang, title] = splitLangAndTitle(pre.getAttribute("data-lang"));
+      const [lang, title] = splitLangAndTitle(pre.dataset.lang);
 
       const code = document.createElement("code");
       code.textContent = pre.textContent;
