@@ -1401,6 +1401,18 @@ pre[class*="language-"] {
     padding: 1em;
     margin: .5em 0;
     overflow: auto;
+
+    /* 追加 */
+    padding: 1em 10px;
+    margin: .5em -10px;
+}
+
+/* 追加 */
+@media (min-width: 640px) {
+    pre[class*="language-"] {
+        padding: 1em;
+        margin: .5em 0;
+    }
 }
 
 :not(pre) > code[class*="language-"],
